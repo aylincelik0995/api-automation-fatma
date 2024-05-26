@@ -1,15 +1,9 @@
-let options = [
-    '--require ./steps/*.steps.js',
-    '--format progress',
-    '--publish-quiet'
-    ].join(' ');
-
-let run_features = [
-    './features/', 
-    options,
-    ].join(' ');
-
+// cucumber.js
+const common = [
+    'tests/features/**/*.feature', // Specify our feature files
+    '--require tests/step_definitions/**/*.js', // Load step definitions
+].join(' ');
 
 module.exports = {
-    test_runner: run_features
+    default: common,
 };
