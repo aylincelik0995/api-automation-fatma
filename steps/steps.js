@@ -23,4 +23,11 @@ Given( 'I an authorized user with username {string} and password {string}',funct
       };
 }
 
+When('I send a "GET" request to "USER" with header parameters', function (username,password) {
+    const paramsArray = params.split(',').map(Number);
+    response = await request.post(`/api/${operation}?params=${paramsArray.join(',')}`, {
+      headers
+    });
+  });
+
 );
