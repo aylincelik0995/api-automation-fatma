@@ -28,6 +28,8 @@ When('I send a GET request to {string} with param {string}', async function (ope
   this.response = response;
 });
 
+
+
 //test code
 When('I send a GET request', async function () {
   const context = await request.newContext();
