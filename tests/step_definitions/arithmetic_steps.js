@@ -15,12 +15,12 @@ Given('I am authenticated with username {string} and password {string}', async f
   const responseLogin = await contextLogin.post(loginURL, {
     headers: this.headers,
   });
-  let session = responseLogin[session];
+  let token = responseLogin[token];
 
   this.headers = {
     'username': username,
     'password': password,
-    'session': session
+    'Authorization': token
   };
 
 });
