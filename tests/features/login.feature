@@ -1,4 +1,4 @@
-Feature: Login API
+Feature: Login scenarios
 
   Scenario: Authentication and Header Validation
     Given the API requires a username and password in the header
@@ -6,4 +6,5 @@ Feature: Login API
     Then the API should return a bad request
     When I make a request with a valid username and password
     Then the API should return a successful response
+
 
